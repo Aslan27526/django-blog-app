@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+
+        {% block body %}
+        <div class="jumbotron text-center">
+                <h3>AzBlog bloguna xoş gəlmişsiniz</h3>
+                <p>Burada istədiyiniz mövzü haqqında məqalə paylaşa, həmçinin bilmədikəriniizi öyrənə bilərsiz</p>
+        </div>
+        <p>
+                {% if request.user.is_authenticated %}
+                        Giriş etdiniz {{request.user.username}}
+                  
+                {% else %}
+                <p>Hesabınıza giriş etməmisiz</p>
+                {% endif %}
+                
+
+        </p>
+        {% endblock  %}
